@@ -1,0 +1,16 @@
+#ifndef JUGADOR_H
+#define JUGADOR_H
+
+#include "mano.h"
+class Jugada;
+class Jugador
+{
+
+public:
+    Jugador(int id);
+    virtual ~Jugador();
+    Jugada *mano;
+    int id;
+};
+
+#endif // JUGADOR_H

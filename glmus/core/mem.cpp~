@@ -1,0 +1,14 @@
+#include "mem.h"
+
+Mem::Mem(int numreyes)
+{
+  this->numreyes=numreyes;
+  this->baraja=new Baraja();
+  
+
+}
+
+Mem::~Mem()
+{
+
+}

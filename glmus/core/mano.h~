@@ -1,0 +1,19 @@
+
+#include "carta.h"
+
+#ifndef MANO_H
+#define MANO_H
+
+#include <QtCore/QList>
+class Carta;
+class Mano
+{
+
+public:
+    Mano();
+    virtual ~Mano();
+    QList<Carta*> *mano;
+    bool tienePares();
+};
+
+#endif // MANO_H

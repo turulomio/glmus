@@ -1,0 +1,16 @@
+#ifndef SETJUGADORES_H
+#define SETJUGADORES_H
+
+#include <QtCore/QList>
+#include "jugador.h"
+
+class SetJugadores
+{
+
+public:
+    SetJugadores();
+    virtual ~SetJugadores();
+    QList *arr;
+};
+
+#endif // SETJUGADORES_H

@@ -1,0 +1,20 @@
+#ifndef _WDGGAME_H
+#define _WDGGAME_H
+
+#include <QtGui/QMainWindow>
+#include <QtGui/QGraphicsScene>
+#include "ui_wdgGame.h"
+#include "mem.h"
+
+class wdgGame : public QWidget, public Ui_wdgGame {
+Q_OBJECT
+
+public:
+  wdgGame(Mem *mem):Ui_wdgGame(){
+  };
+  virtual ~wdgGame();
+  QGraphicsScene *scene;
+  Mem *mem;
+};
+#endif 
+

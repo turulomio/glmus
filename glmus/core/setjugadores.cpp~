@@ -1,0 +1,12 @@
+#include "setjugadores.h"
+
+SetJugadores::SetJugadores()
+{
+  this->arr=new QList<Jugador*>()
+}
+
+SetJugadores::~SetJugadores()
+{
+
+}
+

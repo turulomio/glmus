@@ -1,0 +1,74 @@
+#include "carta.h"
+
+Carta::Carta(int palo, int valor)
+{
+  this->palo=palo;
+  this->valor=valor;
+  this->hide=false;
+  this->setPixmap(this->qpixmap());
+
+}
+
+Carta::~Carta()
+{
+
+}
+
+QPixmap Carta::qpixmap(){
+  if (this->hide){
+    return QPixmap(":/pc.spanish/back.png");
+  } else{
+    QString resultado;
+    QString valor;
+    switch (this->palo){
+	case 1:
+	    resultado="oros";
+	    break;
+	case 2:
+	    resultado="copas";
+	    break;
+	case 3:
+	    resultado="espadas";
+	    break;
+	case 4:
+	    resultado="bastos";
+	    break;
+    }
+    if (this->valor<=7){
+      valor=QString("%1").arg(this->valor);
+    } else if (this->valor==8){
+      valor=QString("J");
+    } else if (this->valor==9){
+      valor=QString("Q");
+    } else if (this->valor==10){
+      valor=QString("K");
+    }
+      
+    resultado=QString(":/pc.spanish/%1%2.png").arg(resultado).arg(this->valor);
+    qDebug() <<resultado;
+    return QPixmap(resultado);
+  }
+}
+
+
+/*Si el jugador es None, la carta se pone en el centro
+ Jugador 0 a la right
+ 1 up
+ 2 left
+ 3 down
+ */
+void Carta::setPosition(int id_jugador, int posicion)
+{
+
+}
+
+// void Carta::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *){
+// 	painter->drawRect(2,2,100,100);
+// }
+// 
+// QRectF Carta::boundingRect() const
+//  {
+//      qreal adjust = 0.5;
+//      return QRectF(-18 - adjust, -22 - adjust,
+//                    36 + adjust, 60 + adjust);
+//  }

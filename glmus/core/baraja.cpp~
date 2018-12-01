@@ -1,0 +1,29 @@
+#include "baraja.h"
+
+Baraja::Baraja()
+{
+  this->cartas=new QList<Carta*>();
+  this->monton=new QList<Carta*>();
+  for (int i=1; i<5;i++){//Recorre los palos
+    for (int j=1; j<11; j++){
+      Carta *a=new Carta(i,j);
+      this->cartas->append(a);
+      this->monton->append(a);
+    }
+  }
+//  this->darCarta();
+}
+
+Baraja::~Baraja()
+{
+
+}
+/*
+Carta Baraja::darCarta()
+{
+  int pos=qrand() % this->monton->count();
+  qDebug()<< qrand()<< pos;
+  return this->monton->at(pos);
+  
+}
+*/

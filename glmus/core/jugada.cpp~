@@ -1,0 +1,16 @@
+#include "mano.h"
+
+Jugada::Jugada()
+{
+  this->mano=new QList<Carta*>();
+}
+
+Jugada::~Jugada()
+{
+
+}
+
+bool Jugada::tienePares()
+{
+  return true;
+}

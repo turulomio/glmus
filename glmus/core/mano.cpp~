@@ -1,0 +1,16 @@
+#include "mano.h"
+
+Mano::Mano()
+{
+  this->mano=new QList<Carta*>();
+}
+
+Mano::~Mano()
+{
+
+}
+
+bool Mano::tienePares()
+{
+  return true;
+}

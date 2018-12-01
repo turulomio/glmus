@@ -1,0 +1,15 @@
+#ifndef MEM_H
+#define MEM_H
+
+
+#include "baraja.h"
+class Mem
+{
+public:
+    Mem(int numreyes);
+    virtual ~Mem();
+    Baraja *baraja;
+    int numreyes;
+};
+
+#endif // MEM_H

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frmMain</class>
+ <widget class="QMainWindow" name="frmMain">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>516</width>
+    <height>404</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>glMus 2013 - GNU GPL License</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../images/glmus.qrc">
+    <normaloff>:/pc.spanish/back.png</normaloff>:/pc.spanish/back.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QVBoxLayout" name="layout"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>516</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>J&amp;uego</string>
+    </property>
+    <addaction name="actionJuego4Reyes"/>
+    <addaction name="actionJuego8Reyes"/>
+    <addaction name="separator"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <widget class="QMenu" name="menuA_yuda">
+    <property name="title">
+     <string>A&amp;yuda</string>
+    </property>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuA_yuda"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionJuego4Reyes"/>
+   <addaction name="actionJuego8Reyes"/>
+   <addaction name="separator"/>
+   <addaction name="actionSalir"/>
+  </widget>
+  <action name="actionJuego4Reyes">
+   <property name="icon">
+    <iconset resource="../images/glmus.qrc">
+     <normaloff>:/game4.png</normaloff>:/game4.png</iconset>
+   </property>
+   <property name="text">
+    <string>Juego con 4 reyes</string>
+   </property>
+   <property name="toolTip">
+    <string>Juego con 4 reyes</string>
+   </property>
+  </action>
+  <action name="actionJuego8Reyes">
+   <property name="icon">
+    <iconset resource="../images/glmus.qrc">
+     <normaloff>:/game8.png</normaloff>:/game8.png</iconset>
+   </property>
+   <property name="text">
+    <string>Juego con 8 reyes</string>
+   </property>
+   <property name="toolTip">
+    <string>Juego con 8 reyes</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="icon">
+    <iconset resource="../images/glmus.qrc">
+     <normaloff>:/exit.png</normaloff>:/exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Salir</string>
+   </property>
+   <property name="toolTip">
+    <string>Salir</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../images/glmus.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionSalir</sender>
+   <signal>triggered()</signal>
+   <receiver>frmMain</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>257</x>
+     <y>201</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

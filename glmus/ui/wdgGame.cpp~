@@ -1,0 +1,15 @@
+#include "wdgGame.h"
+
+wdgGame::wdgGame(Mem *mem) {
+  setupUi(this);
+  this->mem=mem ;
+  this->scene=new QGraphicsScene();
+  this->scene->setSceneRect(0,0,600,600);
+  this->scene->setItemIndexMethod(QGraphicsScene::NoIndex);
+  this->view->setScene(this->scene);
+  this->scene->addItem(this->mem->baraja->cartas->at(0);
+}
+
+wdgGame::~wdgGame() {
+}
+

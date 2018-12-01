@@ -1,0 +1,23 @@
+#include "frmMain.h"
+
+frmMain::frmMain() {
+  setupUi(this);
+  this->showMaximized();
+}
+
+frmMain::~frmMain() {
+}
+
+void frmMain::on_actionJuego4Reyes_triggered(bool checked){
+  this->mem=new Mem();
+  this->mem->cargarMemoria(4);
+  this->game=new wdgGame(&this->mem);
+  this->Ui_frmMain::layout->addWidget(this->game);
+}
+
+void frmMain::on_actionJuego8Reyes_triggered(bool checked){
+  this->mem=new Mem();
+  this->mem->cargarMemoria(8);
+  this->game=new wdgGame(this->mem);
+  this->Ui_frmMain::layout->addWidget(this->game);
+}

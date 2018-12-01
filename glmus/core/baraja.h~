@@ -1,0 +1,20 @@
+#ifndef BARAJA_H
+#define BARAJA_H
+
+#include <QtCore/QList>
+#include <qglobal.h>
+#include <QtDebug>
+#include "carta.h"
+
+class Baraja
+{
+
+public:
+    Baraja();
+    virtual ~Baraja();
+    QList<Carta*> *cartas;
+    QList<Carta*> *monton;
+//    Carta darCarta();
+};
+
+#endif // BARAJA_H
